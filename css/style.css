@@ -1,0 +1,209 @@
+* {
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+body {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    background-color: #091921;
+
+    min-height: 100vh;
+
+}
+
+section.clock {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url('../imagens/clock.png');
+    background-size: cover;
+    
+    border-radius: 50%;
+
+    box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05),
+                inset 0 -15px 15px rgba(255, 255, 255, 0.05),
+                0 15px 15px rgba(0, 0, 0, 0.3),
+                inset 0 15px 15px rgba(0, 0, 0, 0.3);
+
+    width: 350px;
+    height: 350px;
+
+    transition: 0.2s;
+
+    cursor: pointer;
+
+}
+
+section.clock:hover {
+
+    background-color: #091921AF;
+
+}
+
+section.clock:hover .pointer {
+
+    box-shadow: 0 0 10px white;
+
+}
+
+section.clock .pointer {
+
+    background: white;
+
+    border-radius: 50%;
+
+    box-shadow: 0 0 1px white;
+
+    width: 10px;
+    height: 10px;
+
+    z-index: 50;
+
+    transition: 0.5s;
+
+}
+
+section.clock .horas,
+section.clock .minutos,
+section.clock .segundos {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+}
+
+section.clock .horas, .hr {
+
+    width: 160px;
+    height: 160px;
+
+}
+
+section.clock .minutos, .mn {
+    
+    width: 190px;
+    height: 190px;
+
+}
+
+section.clock .segundos, .sg {
+    
+    width: 230px;
+    height: 230px;
+
+}
+
+.hr,
+.mn,
+.sg {
+
+    display: flex;
+    justify-content: center;
+
+    position: absolute;
+
+}
+
+.hr::before {
+
+    content: '';
+    position: absolute;
+
+    background-color: #FF105E;
+
+    border-radius: 6px 6px 0 0;
+
+    width: 8px;
+    height: 80px;
+
+    z-index: 10;
+
+}
+
+.mn::before {
+
+    content: '';
+    position: absolute;
+
+    background-color: white;
+
+    border-radius: 6px 6px 0 0;
+
+    width: 4px;
+    height: 90px;
+
+    z-index: 11;
+
+}
+
+.sg::before {
+
+    content: '';
+    position: absolute;
+
+    background-color: #3ABEFF;
+
+    border-radius: 6px 6px 0 0;
+
+    width: 2px;
+    height: 150px;
+
+    z-index: 12;
+
+}
+
+button {
+
+    background: #FF105E;
+    color: white;
+
+    font-family: 'Poppins';
+    font-size: 2.5rem;
+    font-weight: bolder;
+
+    border: 0;
+
+    border-radius: 6px;
+
+    text-shadow: 0 0 5px black;
+    
+    width: 200px;
+
+    margin-top: 2rem;
+    padding: 0.25rem 0;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+button:hover {
+    
+    background: white;
+    color: #FF105E;
+
+    box-shadow: 0 0 5px white;
+    text-shadow: 0 0 5px white;
+
+}
+
+button:focus {
+
+    background: #03CEA4;
+    color: white;
+
+}
